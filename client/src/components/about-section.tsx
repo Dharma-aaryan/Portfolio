@@ -5,6 +5,7 @@ interface ExperienceItem {
   organization: string;
   period: string;
   description: string;
+  icon?: string;
 }
 
 interface SectionCardProps {
@@ -26,11 +27,27 @@ const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) =
     <div className="space-y-5">
       {items.map((item, index) => (
         <div key={index} className="border-l-2 border-[var(--portfolio-accent)] pl-6">
-          <h4 className="text-base font-semibold text-[var(--portfolio-accent)] mb-1">{item.title}</h4>
-          <p className="text-[var(--portfolio-text-secondary)] mb-2 text-sm">{item.organization} • {item.period}</p>
-          <p className="text-xs text-[var(--portfolio-text-secondary)]">
-            {item.description}
-          </p>
+          <div className="flex items-start space-x-3">
+            {item.icon && (
+              <div className="flex-shrink-0 w-8 h-8 rounded-lg overflow-hidden bg-white p-1 mt-0.5">
+                <img 
+                  src={item.icon} 
+                  alt={`${item.organization} logo`}
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            )}
+            <div className="flex-1">
+              <h4 className="text-base font-semibold text-[var(--portfolio-accent)] mb-1">{item.title}</h4>
+              <p className="text-[var(--portfolio-text-secondary)] mb-2 text-sm">{item.organization} • {item.period}</p>
+              <p className="text-xs text-[var(--portfolio-text-secondary)]">
+                {item.description}
+              </p>
+            </div>
+          </div>
         </div>
       ))}
     </div>
@@ -43,37 +60,43 @@ export default function AboutSection() {
       title: "Senior Full Stack Developer",
       organization: "TechCorp Solutions",
       period: "2022 - Present",
-      description: "Leading development of scalable web applications using modern frameworks and cloud technologies."
+      description: "Leading development of scalable web applications using modern frameworks and cloud technologies.",
+      icon: "/images/logos/techcorp.png"
     },
     {
       title: "Frontend Developer",
       organization: "Digital Innovations",
       period: "2020 - 2022",
-      description: "Developed responsive user interfaces and collaborated with cross-functional teams."
+      description: "Developed responsive user interfaces and collaborated with cross-functional teams.",
+      icon: "/images/logos/digital-innovations.png"
     },
     {
       title: "Software Engineer Intern",
       organization: "StartupHub",
       period: "Summer 2019",
-      description: "Built microservices and APIs for customer-facing applications."
+      description: "Built microservices and APIs for customer-facing applications.",
+      icon: "/images/logos/startuphub.png"
     },
     {
       title: "Web Developer",
       organization: "Freelance",
       period: "2018 - 2020",
-      description: "Created custom websites and e-commerce solutions for small businesses."
+      description: "Created custom websites and e-commerce solutions for small businesses.",
+      icon: "/images/logos/freelance.png"
     },
     {
       title: "Junior Developer",
       organization: "CodeWorks Inc",
       period: "2017 - 2018",
-      description: "Assisted in maintaining legacy systems and implementing new features."
+      description: "Assisted in maintaining legacy systems and implementing new features.",
+      icon: "/images/logos/codeworks.png"
     },
     {
       title: "Technical Support Specialist",
       organization: "TechSupport Pro",
       period: "2016 - 2017",
-      description: "Provided technical support and troubleshooting for software applications."
+      description: "Provided technical support and troubleshooting for software applications.",
+      icon: "/images/logos/techsupport.png"
     }
   ];
 
@@ -82,13 +105,15 @@ export default function AboutSection() {
       title: "Master of Computer Science",
       organization: "Stanford University",
       period: "2018 - 2020",
-      description: "Specialized in Machine Learning and Software Engineering"
+      description: "Specialized in Machine Learning and Software Engineering",
+      icon: "/images/logos/stanford.png"
     },
     {
       title: "Bachelor of Computer Engineering",
       organization: "MIT",
       period: "2014 - 2018",
-      description: "Magna Cum Laude, Focus on Web Technologies"
+      description: "Magna Cum Laude, Focus on Web Technologies",
+      icon: "/images/logos/mit.png"
     }
   ];
 
@@ -97,19 +122,22 @@ export default function AboutSection() {
       title: "President",
       organization: "Computer Science Student Association",
       period: "2017 - 2018",
-      description: "Led a team of 50+ students, organized tech workshops and networking events."
+      description: "Led a team of 50+ students, organized tech workshops and networking events.",
+      icon: "/images/logos/cssa.png"
     },
     {
       title: "Vice President",
       organization: "Engineering Honor Society",
       period: "2016 - 2017",
-      description: "Managed academic programs and mentorship initiatives for engineering students."
+      description: "Managed academic programs and mentorship initiatives for engineering students.",
+      icon: "/images/logos/ehs.png"
     },
     {
       title: "Team Lead",
       organization: "University Hackathon Committee",
       period: "2015 - 2016",
-      description: "Organized annual hackathon with 200+ participants and $10K in prizes."
+      description: "Organized annual hackathon with 200+ participants and $10K in prizes.",
+      icon: "/images/logos/hackathon.png"
     }
   ];
 

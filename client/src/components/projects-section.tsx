@@ -128,9 +128,14 @@ export default function ProjectsSection() {
         </div>
         
         <div className="text-center mt-12">
-          <button className="gradient-bg text-[var(--portfolio-text-primary)] px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300">
+          <a 
+            href="https://github.com/aaryan-dharmadhikari" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block gradient-bg text-[var(--portfolio-text-primary)] px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300"
+          >
             View All Projects
-          </button>
+          </a>
         </div>
       </div>
     </section>
