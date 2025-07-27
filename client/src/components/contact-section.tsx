@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -19,7 +19,6 @@ export default function ContactSection() {
     defaultValues: {
       name: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
@@ -107,12 +106,7 @@ export default function ContactSection() {
               >
                 <Github className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
               </a>
-              <a 
-                href="#" 
-                className="w-12 h-12 bg-[var(--portfolio-secondary)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] transition-colors duration-300"
-              >
-                <Twitter className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </a>
+
             </div>
           </div>
           
@@ -157,24 +151,7 @@ export default function ContactSection() {
                   )}
                 />
                 
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">Subject</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field}
-                          placeholder="Project discussion"
-                          className="w-full bg-[var(--portfolio-primary)] border border-[var(--portfolio-secondary)] rounded-lg px-4 py-3 text-[var(--portfolio-text-primary)] focus:border-[var(--portfolio-accent)] focus:outline-none transition-colors duration-300"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
+
                 <FormField
                   control={form.control}
                   name="message"

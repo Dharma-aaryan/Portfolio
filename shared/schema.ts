@@ -26,12 +26,12 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertContactSchema = createInsertSchema(contacts).pick({
   name: true,
   email: true,
-  subject: true,
   message: true,
 }).extend({
   email: z.string().email("Please enter a valid email address"),
   name: z.string().min(2, "Name must be at least 2 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
+  subject: z.string().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

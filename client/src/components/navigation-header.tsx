@@ -29,10 +29,10 @@ export default function NavigationHeader() {
               About
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection('certifications')}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
-              Skills
+              Certifications
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
@@ -68,10 +68,10 @@ export default function NavigationHeader() {
                 About
               </button>
               <button 
-                onClick={() => scrollToSection('skills')}
+                onClick={() => scrollToSection('certifications')}
                 className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
               >
-                Skills
+                Certifications
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}

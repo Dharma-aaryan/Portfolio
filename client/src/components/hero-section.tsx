@@ -24,29 +24,48 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--portfolio-primary)]/50"></div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <div className="mb-6">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-            <span className="gradient-text">Full Stack</span><br />
-            <span className="text-[var(--portfolio-text-primary)]">Developer</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-[var(--portfolio-text-secondary)] font-light max-w-2xl mx-auto leading-relaxed">
-            Crafting exceptional digital experiences through innovative technology solutions
-          </p>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-          <button 
-            onClick={scrollToProjects}
-            className="gradient-bg text-[var(--portfolio-text-primary)] px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center space-x-2"
-          >
-            <span>View My Work</span>
-            <ArrowRight size={20} />
-          </button>
-          <button className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2">
-            <Download size={20} />
-            <span>Download Resume</span>
-          </button>
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Left side - Text content */}
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              <span className="gradient-text">Full Stack</span><br />
+              <span className="text-[var(--portfolio-text-primary)]">Developer</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-[var(--portfolio-text-secondary)] font-light leading-relaxed mb-8">
+              Crafting exceptional digital experiences through innovative technology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <button 
+                onClick={scrollToProjects}
+                className="gradient-bg text-[var(--portfolio-text-primary)] px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center space-x-2 justify-center"
+              >
+                <span>View My Work</span>
+                <ArrowRight size={20} />
+              </button>
+              <button className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center">
+                <Download size={20} />
+                <span>Download Resume</span>
+              </button>
+            </div>
+          </div>
+          
+          {/* Right side - Profile image */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-[var(--portfolio-accent)] shadow-2xl hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/images/profile.jpg"
+                  alt="Aaryan Dharmadhikari"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400';
+                  }}
+                />
+              </div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[var(--portfolio-accent)] to-[var(--portfolio-gradient-end)] rounded-full opacity-20 blur-lg"></div>
+            </div>
+          </div>
         </div>
       </div>
       

@@ -27,10 +27,10 @@ export default function Footer() {
               About
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection('certifications')}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
-              Skills
+              Certifications
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
