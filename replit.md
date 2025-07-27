@@ -100,3 +100,26 @@ Preferred communication style: Simple, everyday language.
 - `npm run db:push`: Pushes database schema changes via Drizzle
 
 The application is designed to be deployed on platforms like Replit, Vercel, or similar Node.js hosting environments with PostgreSQL database support.
+
+## Recent Performance & UX Improvements (January 2025)
+
+### Navigation & Scroll Performance
+- Added scroll spy functionality with active section highlighting in navigation
+- Implemented smooth scroll behavior with performance optimizations
+- Created custom useScrollSpy hook for better user experience
+
+### Form & UI Enhancements
+- Enhanced contact form with loading states and spinner animations
+- Added disabled states with visual feedback during form submission
+- Improved button interactions with proper hover and transition effects
+
+### Image & Asset Optimization
+- Added eager loading for hero profile image
+- Implemented content-visibility for better image performance
+- Added proper resume download functionality with file naming
+
+### CSS Performance Optimizations
+- Added will-change properties for smooth animations
+- Implemented backface-visibility for better rendering
+- Created reusable CSS classes for hover effects and gradients
+- Enhanced font smoothing across all browsers

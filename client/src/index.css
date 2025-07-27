@@ -72,6 +72,44 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Performance optimizations */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--portfolio-accent), var(--portfolio-gradient-end));
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--portfolio-accent), var(--portfolio-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-padding {
+    padding: 6rem 0;
+  }
+
+  /* Image optimization */
+  img {
+    content-visibility: auto;
+  }
+
+  /* Smooth animations */
+  * {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 @layer components {

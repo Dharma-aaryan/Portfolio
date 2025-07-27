@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 export default function NavigationHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const activeSection = useScrollSpy(['about', 'certifications', 'projects', 'contact']);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -24,25 +26,41 @@ export default function NavigationHeader() {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
+              className={`transition-colors duration-300 ${
+                activeSection === 'about' 
+                  ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
+                  : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
+              }`}
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('certifications')}
-              className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
+              className={`transition-colors duration-300 ${
+                activeSection === 'certifications' 
+                  ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
+                  : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
+              }`}
             >
               Certifications
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
+              className={`transition-colors duration-300 ${
+                activeSection === 'projects' 
+                  ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
+                  : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
+              }`}
             >
               Projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
+              className={`transition-colors duration-300 ${
+                activeSection === 'contact' 
+                  ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
+                  : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
+              }`}
             >
               Contact
             </button>

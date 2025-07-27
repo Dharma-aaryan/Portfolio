@@ -39,10 +39,14 @@ export default function HeroSection() {
                 <span>View My Work</span>
                 <ArrowRight size={20} />
               </button>
-              <button className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center">
+              <a 
+                href="/resume.pdf" 
+                download="Aaryan_Dharmadhikari_Resume.pdf"
+                className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center"
+              >
                 <Download size={20} />
                 <span>Download Resume</span>
-              </button>
+              </a>
             </div>
           </div>
           
@@ -54,6 +58,7 @@ export default function HeroSection() {
                   src="/images/profile.jpg"
                   alt="Aaryan Dharmadhikari"
                   className="w-full h-full object-cover object-center"
+                  loading="eager"
                   onError={(e) => {
                     e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400';
                   }}
