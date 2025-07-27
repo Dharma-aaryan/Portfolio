@@ -16,20 +16,20 @@ interface SectionCardProps {
 }
 
 const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) => (
-  <div className={`bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift ${className}`}>
-    <div className="flex items-center mb-6">
-      <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+  <div className={`bg-[var(--portfolio-primary)]/50 p-5 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift ${className}`}>
+    <div className="flex items-center mb-5">
+      <div className="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center mr-3">
         {icon}
       </div>
-      <h3 className="text-xl font-bold">{title}</h3>
+      <h3 className="text-lg font-bold">{title}</h3>
     </div>
     
-    <div className="space-y-5">
+    <div className="space-y-4">
       {items.map((item, index) => (
-        <div key={index} className="border-l-2 border-[var(--portfolio-accent)] pl-6">
+        <div key={index} className="border-l-2 border-[var(--portfolio-accent)] pl-4">
           <div className="flex items-start space-x-3">
             {item.icon && (
-              <div className="flex-shrink-0 w-8 h-8 rounded-lg overflow-hidden bg-white p-1 mt-0.5">
+              <div className="flex-shrink-0 w-7 h-7 rounded-lg overflow-hidden bg-white p-1 mt-0.5">
                 <img 
                   src={item.icon} 
                   alt={`${item.organization} logo`}
@@ -41,9 +41,9 @@ const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) =
               </div>
             )}
             <div className="flex-1">
-              <h4 className="text-base font-semibold text-[var(--portfolio-accent)] mb-1">{item.title}</h4>
-              <p className="text-[var(--portfolio-text-secondary)] mb-2 text-sm">{item.organization} • {item.period}</p>
-              <p className="text-xs text-[var(--portfolio-text-secondary)]">
+              <h4 className="text-sm font-semibold text-[var(--portfolio-accent)] mb-1">{item.title}</h4>
+              <p className="text-[var(--portfolio-text-secondary)] mb-1 text-xs">{item.organization} • {item.period}</p>
+              <p className="text-xs text-[var(--portfolio-text-secondary)] leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -153,16 +153,15 @@ export default function AboutSection() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Professional Experience - Takes 2 columns on large screens */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {/* Professional Experience - Takes 1 column (half) */}
           <SectionCard
             icon={<Briefcase className="text-[var(--portfolio-text-primary)]" size={24} />}
             title="Professional Experience"
             items={professionalExperience}
-            className="lg:col-span-2"
           />
           
-          {/* Education - Takes 1 column */}
+          {/* Education and Leadership - Takes 1 column (half) */}
           <div className="space-y-8">
             <SectionCard
               icon={<GraduationCap className="text-[var(--portfolio-text-primary)]" size={24} />}
@@ -170,7 +169,6 @@ export default function AboutSection() {
               items={education}
             />
             
-            {/* Leadership - Takes 1 column */}
             <SectionCard
               icon={<Users className="text-[var(--portfolio-text-primary)]" size={24} />}
               title="Leadership Experience"
