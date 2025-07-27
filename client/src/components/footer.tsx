@@ -27,6 +27,12 @@ export default function Footer() {
               About
             </button>
             <button 
+              onClick={() => scrollToSection('skills')}
+              className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
+            >
+              Skills
+            </button>
+            <button 
               onClick={() => scrollToSection('certifications')}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >

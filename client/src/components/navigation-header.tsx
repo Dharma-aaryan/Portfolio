@@ -4,7 +4,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 export default function NavigationHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const activeSection = useScrollSpy(['about', 'certifications', 'projects', 'contact']);
+  const activeSection = useScrollSpy(['about', 'skills', 'projects', 'certifications', 'contact']);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -33,6 +33,16 @@ export default function NavigationHeader() {
               }`}
             >
               About
+            </button>
+            <button 
+              onClick={() => scrollToSection('skills')}
+              className={`transition-colors duration-300 ${
+                activeSection === 'skills' 
+                  ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
+                  : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
+              }`}
+            >
+              Skills
             </button>
             <button 
               onClick={() => scrollToSection('certifications')}
@@ -84,6 +94,12 @@ export default function NavigationHeader() {
                 className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
               >
                 About
+              </button>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
+              >
+                Skills
               </button>
               <button 
                 onClick={() => scrollToSection('certifications')}
