@@ -17,12 +17,8 @@ export default function HeroSection() {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center parallax-bg"
-      style={{
-        backgroundImage: `linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=1200')`
-      }}
+      className="relative min-h-screen flex items-center justify-center bg-[var(--portfolio-primary)]"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[var(--portfolio-primary)]/50"></div>
       
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
@@ -53,11 +49,11 @@ export default function HeroSection() {
           {/* Right side - Profile image */}
           <div className="flex justify-center md:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-[var(--portfolio-accent)] shadow-2xl hover:scale-105 transition-transform duration-300">
+              <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-[var(--portfolio-accent)] shadow-2xl hover:scale-105 transition-transform duration-300">
                 <img 
                   src="/images/profile.jpg"
                   alt="Aaryan Dharmadhikari"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                   onError={(e) => {
                     e.currentTarget.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400';
                   }}
