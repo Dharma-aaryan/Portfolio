@@ -107,7 +107,7 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
 );
 
 const TabCard = ({ item }: { item: ExperienceItem }) => (
-  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-none">
+  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-none">
     <div className="flex items-start space-x-6">
       {item.icon && (
         <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
@@ -123,9 +123,10 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
       )}
       <div className="flex-1 min-w-0">
         <h4 className="text-xl font-bold text-[var(--portfolio-accent)] mb-3 leading-tight">{item.title}</h4>
-        <p className="text-[var(--portfolio-text-primary)] font-medium mb-1 text-base">
-          {item.organization} • {item.period}
-          {item.location && ` • ${item.location}`}
+        <p className="text-base mb-1">
+          <span className="text-blue-400 font-medium">{item.organization}</span> • 
+          <span className="text-[var(--portfolio-text-primary)] font-medium"> {item.period}</span>
+          {item.location && <span className="text-[var(--portfolio-text-primary)]"> • {item.location}</span>}
         </p>
         {item.bullets && item.bullets.length > 0 ? (
           <ul className="text-base text-[var(--portfolio-text-secondary)] leading-relaxed space-y-2 mt-4">
@@ -248,6 +249,34 @@ export default function AboutSection() {
         "Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency"
       ],
       icon: "/images/logos/droneacharya.png"
+    },
+    {
+      title: "Programming Intern",
+      organization: "SCORG Technologies Pvt. Ltd.",
+      period: "Feb 2022 - Apr 2022",
+      location: "Internship · Pune, India",
+      description: "",
+      type: "work",
+      startDate: "2022-02",
+      bullets: [
+        "Developed OCR-based document preprocessing in Python",
+        "Focused on data cleaning, segmentation, and feature extraction for unstructured documents"
+      ],
+      icon: "/images/logos/scorg.png"
+    },
+    {
+      title: "Development Intern",
+      organization: "Task Consultants Pvt. Ltd.",
+      period: "Jul 2021 - Sep 2021",
+      location: "Internship · Hybrid · Pune, India",
+      description: "",
+      type: "work",
+      startDate: "2021-07",
+      bullets: [
+        "Created an Android app for MBTB's Center Management using Java and Firebase",
+        "Improved UI/UX and navigation while streamlining backend operations via Firebase DB"
+      ],
+      icon: "/images/logos/task-consultants.png"
     }
   ];
 
@@ -331,7 +360,7 @@ export default function AboutSection() {
     {
       title: "Enhancing Healthcare Outcomes through Business Intelligence and Real-Time Analytics",
       organization: "IJECBS",
-      period: "July 2022",
+      period: "December 2022",
       location: "Research Publication",
       description: "This research explores the integration of business intelligence systems and real-time analytics to improve healthcare delivery, operational efficiency, and patient outcomes in hospital environments.",
       type: "publication",
