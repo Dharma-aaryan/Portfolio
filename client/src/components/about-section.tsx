@@ -102,42 +102,42 @@ export default function AboutSection() {
 
   const education: ExperienceItem[] = [
     {
-      title: "Master of Computer Science",
-      organization: "Stanford University",
-      period: "2018 - 2020",
-      description: "Specialized in Machine Learning and Software Engineering",
-      icon: "/images/logos/stanford.png"
+      title: "MS, Information Technology & Management",
+      organization: "University of Texas at Dallas",
+      period: "2023 - 2025",
+      description: "Dallas, TX - Graduate program focusing on IT strategy, data management, and business technology integration",
+      icon: "/images/logos/utd.png"
     },
     {
-      title: "Bachelor of Computer Engineering",
-      organization: "MIT",
-      period: "2014 - 2018",
-      description: "Magna Cum Laude, Focus on Web Technologies",
-      icon: "/images/logos/mit.png"
+      title: "BE, Computer Engineering (Honors in Data Science)",
+      organization: "Savitribai Phule Pune University (SPPU)",
+      period: "2019 - 2023",
+      description: "India - Bachelor's degree with specialized honors in Data Science and computer engineering fundamentals",
+      icon: "/images/logos/sppu.png"
     }
   ];
 
   const leadership: ExperienceItem[] = [
     {
-      title: "President",
-      organization: "Computer Science Student Association",
-      period: "2017 - 2018",
-      description: "Led a team of 50+ students, organized tech workshops and networking events.",
-      icon: "/images/logos/cssa.png"
-    },
-    {
       title: "Vice President",
-      organization: "Engineering Honor Society",
-      period: "2016 - 2017",
-      description: "Managed academic programs and mentorship initiatives for engineering students.",
-      icon: "/images/logos/ehs.png"
+      organization: "EnVision UTD · University of Texas at Dallas",
+      period: "Oct 2024 - May 2025",
+      description: "Led a data visualization student organization focused on industry collaboration, technical workshops, and Tableau-sponsored events. Facilitated professional development for 200+ students through interactive learning initiatives and real-world analytics use cases.",
+      icon: "/images/logos/envision-utd.png"
     },
     {
-      title: "Team Lead",
-      organization: "University Hackathon Committee",
-      period: "2015 - 2016",
-      description: "Organized annual hackathon with 200+ participants and $10K in prizes.",
-      icon: "/images/logos/hackathon.png"
+      title: "Co-Head - Development Team",
+      organization: "Google Developer Student Clubs (GDSC)",
+      period: "Sep 2021 - Jul 2022",
+      description: "Directed multi-domain tech initiatives across Android, web, and cloud by leading the core development team. Co-developed a community Android app featured by Google's official dev platforms and mentored peers in full-stack development.",
+      icon: "/images/logos/gdsc-dev.png"
+    },
+    {
+      title: "Android Lead",
+      organization: "Google Developer Student Clubs (GDSC)",
+      period: "Sep 2021 - Jul 2022",
+      description: "Headed Android development activities and technical mentorship sessions. Organized hands-on coding workshops and contributed to open-source projects supporting student learning and engagement.",
+      icon: "/images/logos/gdsc-android.png"
     }
   ];
 
