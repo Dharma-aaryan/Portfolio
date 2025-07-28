@@ -11,46 +11,88 @@ interface Certification {
 export default function CertificationsSection() {
   const certifications: Certification[] = [
     {
-      id: "AWS-SAA-C03",
-      title: "AWS Certified Solutions Architect - Associate",
-      issuer: "Amazon Web Services",
+      id: "146561826",
+      title: "SnowPro Core Certification",
+      issuer: "Snowflake",
+      issueDate: "June 2025 – Expires June 2027",
+      credentialUrl: "https://www.snowflake.com/en/data-cloud/snowpro-certification/"
+    },
+    {
+      id: "8063cc204e...d12eda85e",
+      title: "Corporate Finance",
+      issuer: "LinkedIn",
       issueDate: "March 2024",
-      credentialUrl: "https://aws.amazon.com/certification/verify/"
+      credentialUrl: "https://www.linkedin.com/learning/certificates"
     },
     {
-      id: "CKAD-2024",
-      title: "Certified Kubernetes Application Developer",
-      issuer: "Cloud Native Computing Foundation",
-      issueDate: "January 2024",
-      credentialUrl: "https://www.cncf.io/certification/ckad/"
+      id: "AWS-CF-2022",
+      title: "AWS Academy Cloud Foundations",
+      issuer: "Amazon Web Services",
+      issueDate: "May 2022",
+      credentialUrl: "https://aws.amazon.com/training/awsacademy/"
     },
     {
-      id: "GCP-ACE-2023",
-      title: "Google Cloud Associate Cloud Engineer",
-      issuer: "Google Cloud",
-      issueDate: "November 2023",
-      credentialUrl: "https://cloud.google.com/certification/cloud-engineer"
+      id: "AWS-ML-2022",
+      title: "AWS Academy Machine Learning Foundations",
+      issuer: "Amazon Web Services",
+      issueDate: "April 2022",
+      credentialUrl: "https://aws.amazon.com/training/awsacademy/"
     },
     {
-      id: "PSM-I-2023",
-      title: "Professional Scrum Master I",
-      issuer: "Scrum.org",
-      issueDate: "September 2023",
-      credentialUrl: "https://www.scrum.org/professional-scrum-certifications"
+      id: "24730145-1024",
+      title: "JavaScript Certificate",
+      issuer: "Sololearn",
+      issueDate: "February 2022",
+      credentialUrl: "https://www.sololearn.com/certificates"
     },
     {
-      id: "TF-ASSOC-2023",
-      title: "HashiCorp Certified: Terraform Associate",
-      issuer: "HashiCorp",
-      issueDate: "August 2023",
-      credentialUrl: "https://www.hashicorp.com/certification/terraform-associate"
+      id: "#1097-24730145",
+      title: "React + Redux Certificate",
+      issuer: "Sololearn",
+      issueDate: "January 2022",
+      credentialUrl: "https://www.sololearn.com/certificates"
     },
     {
-      id: "REACT-DEV-2023",
-      title: "Meta React Developer Professional Certificate",
-      issuer: "Meta (via Coursera)",
-      issueDate: "June 2023",
-      credentialUrl: "https://www.coursera.org/professional-certificates/meta-react-developer"
+      id: "ys9fsq1aoh",
+      title: "Node.js Master Class",
+      issuer: "Pirple",
+      issueDate: "November 2021",
+      credentialUrl: "https://www.pirple.com/"
+    },
+    {
+      id: "E9V2WQCLNRFE",
+      title: "Introduction to IoT & Embedded Systems",
+      issuer: "Coursera",
+      issueDate: "September 2021",
+      credentialUrl: "https://www.coursera.org/learn/iot"
+    },
+    {
+      id: "MBTB-JAVA-2021",
+      title: "Java Programming with JDBC, Multithreading & Networking",
+      issuer: "Maharashtra Business Training Board (MBTB)",
+      issueDate: "July 2021",
+      credentialUrl: "https://www.msbte.org.in/"
+    },
+    {
+      id: "YAY-21L9Y60G",
+      title: "Python Certificate",
+      issuer: "GirlScript Foundation",
+      issueDate: "January 2021",
+      credentialUrl: "https://www.girlscript.tech/"
+    },
+    {
+      id: "YAY-200MRLL5",
+      title: "Front-End Web Development",
+      issuer: "GirlScript Foundation",
+      issueDate: "December 2020",
+      credentialUrl: "https://www.girlscript.tech/"
+    },
+    {
+      id: "C3149A16-1C32-3055-9813-D883255B9123",
+      title: "Programming in Python",
+      issuer: "Internshala Trainings",
+      issueDate: "August 2020",
+      credentialUrl: "https://internshala.com/trainings"
     }
   ];
 
@@ -62,11 +104,11 @@ export default function CertificationsSection() {
             <span className="gradient-text">Certifications</span> & Credentials
           </h2>
           <p className="text-xl text-[var(--portfolio-text-secondary)] max-w-3xl mx-auto">
-            Professional certifications demonstrating expertise across cloud platforms, development frameworks, and industry best practices
+            Recognized credentials demonstrating technical, analytical, and cloud expertise across platforms and technologies.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <div 
               key={index}
