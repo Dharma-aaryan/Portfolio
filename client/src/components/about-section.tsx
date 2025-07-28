@@ -1,55 +1,132 @@
-import { Briefcase, GraduationCap, Users } from "lucide-react";
+import { Briefcase, GraduationCap, Users, ExternalLink, Award, BookOpen, TrendingUp } from "lucide-react";
 
 interface ExperienceItem {
   title: string;
   organization: string;
   period: string;
   description: string;
+  location?: string;
   icon?: string;
+  bullets?: string[];
 }
 
-interface SectionCardProps {
+interface ImpactHighlight {
   icon: React.ReactNode;
-  title: string;
-  items: ExperienceItem[];
-  className?: string;
+  number: string;
+  label: string;
 }
 
-const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) => (
-  <div className={`bg-[var(--portfolio-primary)]/50 p-8 rounded-3xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg ${className}`}>
-    <div className="flex items-center mb-8">
-      <div className="w-14 h-14 gradient-bg rounded-2xl flex items-center justify-center mr-4 shadow-md">
-        {icon}
-      </div>
-      <h3 className="text-2xl font-bold gradient-text">{title}</h3>
-    </div>
-    
-    <div className="space-y-6">
-      {items.map((item, index) => (
-        <div key={index} className="bg-[var(--portfolio-secondary)]/30 p-6 rounded-2xl border-l-4 border-[var(--portfolio-accent)] hover:bg-[var(--portfolio-secondary)]/50 transition-colors duration-300">
-          <div className="flex items-start space-x-4">
-            {item.icon && (
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
-                <img 
-                  src={item.icon} 
-                  alt={`${item.organization} logo`}
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
-            )}
-            <div className="flex-1 min-w-0">
-              <h4 className="text-lg font-bold text-[var(--portfolio-accent)] mb-2 leading-tight">{item.title}</h4>
-              <p className="text-[var(--portfolio-text-primary)] font-medium mb-2 text-sm">{item.organization} • {item.period}</p>
-              <p className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed">
-                {item.description}
-              </p>
-            </div>
+interface Publication {
+  title: string;
+  journal: string;
+  date: string;
+  summary: string;
+  url: string;
+}
+
+const ImpactHighlights = () => {
+  const highlights: ImpactHighlight[] = [
+    {
+      icon: <Briefcase className="text-[var(--portfolio-text-primary)]" size={20} />,
+      number: "8+",
+      label: "Professional Roles"
+    },
+    {
+      icon: <TrendingUp className="text-[var(--portfolio-text-primary)]" size={20} />,
+      number: "20+",
+      label: "Projects Completed"
+    },
+    {
+      icon: <Award className="text-[var(--portfolio-text-primary)]" size={20} />,
+      number: "10+",
+      label: "Certifications"
+    },
+    {
+      icon: <BookOpen className="text-[var(--portfolio-text-primary)]" size={20} />,
+      number: "1",
+      label: "Research Publication"
+    }
+  ];
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      {highlights.map((highlight, index) => (
+        <div key={index} className="bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift text-center">
+          <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-3">
+            {highlight.icon}
           </div>
+          <div className="text-2xl font-bold gradient-text mb-1">{highlight.number}</div>
+          <div className="text-sm text-[var(--portfolio-text-secondary)]">{highlight.label}</div>
         </div>
       ))}
+    </div>
+  );
+};
+
+const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
+  <div className="bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="flex items-start space-x-4">
+      {item.icon && (
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
+          <img 
+            src={item.icon} 
+            alt={`${item.organization} logo`}
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        </div>
+      )}
+      <div className="flex-1 min-w-0">
+        <h4 className="text-lg font-bold text-[var(--portfolio-accent)] mb-2 leading-tight">{item.title}</h4>
+        <p className="text-[var(--portfolio-text-primary)] font-medium mb-1 text-sm">
+          {item.organization} • {item.period}
+          {item.location && ` • ${item.location}`}
+        </p>
+        {item.bullets && item.bullets.length > 0 ? (
+          <ul className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed space-y-1 mt-3">
+            {item.bullets.map((bullet, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-[var(--portfolio-accent)] mr-2 mt-1">•</span>
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed mt-3">
+            {item.description}
+          </p>
+        )}
+      </div>
+    </div>
+  </div>
+);
+
+const PublicationCard = ({ publication }: { publication: Publication }) => (
+  <div className="bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg">
+    <div className="flex items-start space-x-4">
+      <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center flex-shrink-0">
+        <BookOpen className="text-[var(--portfolio-text-primary)]" size={24} />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h4 className="text-lg font-bold text-[var(--portfolio-accent)] mb-2 leading-tight">{publication.title}</h4>
+        <p className="text-[var(--portfolio-text-primary)] font-medium mb-3 text-sm">
+          {publication.journal} • {publication.date}
+        </p>
+        <p className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed mb-4">
+          {publication.summary}
+        </p>
+        <a 
+          href={publication.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 bg-[var(--portfolio-accent)] text-[var(--portfolio-primary)] px-4 py-2 rounded-lg font-medium hover:bg-[var(--portfolio-accent)]/90 transition-colors duration-300"
+        >
+          <span>Show Publication</span>
+          <ExternalLink size={16} />
+        </a>
+      </div>
     </div>
   </div>
 );
@@ -60,42 +137,73 @@ export default function AboutSection() {
       title: "Programming Analyst",
       organization: "Newgen Software",
       period: "Feb 2025 - May 2025",
-      description: "Engineered dynamic web interface using ReactJS, improving efficiency by 35%. Developed low-code/no-code drag-and-drop form builder for non-technical users.",
+      location: "Part-time · Remote",
+      description: "",
+      bullets: [
+        "Engineered a dynamic web interface using ReactJS to streamline data configuration workflows, improving efficiency by 35%",
+        "Developed a low-code/no-code drag-and-drop form builder that empowered non-technical users to build and manage complex forms independently"
+      ],
       icon: "/images/logos/newgen.png"
     },
     {
       title: "Consulting Business Analyst",
       organization: "Synapse ITS",
       period: "Feb 2025 - May 2025",
-      description: "Designed strategic analytics roadmap to integrate APS systems with organization-wide KPIs. Reduced operational latency by 17%.",
+      location: "Apprenticeship · Remote",
+      description: "",
+      bullets: [
+        "Designed a strategic analytics roadmap to integrate APS systems with organization-wide KPIs",
+        "Improved data flow and reporting quality by aligning pipelines with business needs, reducing operational latency by 17%"
+      ],
       icon: "/images/logos/synapse.png"
     },
     {
       title: "Vice President",
       organization: "EnVision UTD",
       period: "Oct 2024 - May 2025",
-      description: "Led organizational growth through technical events and Tableau-sponsored workshops, fostering collaboration among 200+ students and professionals.",
+      location: "Part-time",
+      description: "",
+      bullets: [
+        "Led organizational growth through technical events and Tableau-sponsored workshops",
+        "Fostered collaboration among 200+ students and professionals in data analytics and visualization"
+      ],
       icon: "/images/logos/envision.png"
     },
     {
       title: "Data and BI Analyst",
       organization: "SCORG Technologies Pvt Ltd",
       period: "Aug 2022 - May 2023",
-      description: "Built hospital business intelligence platform for real-time monitoring. Designed and optimized ETL pipelines feeding Power BI dashboards.",
+      location: "Internship · Hybrid",
+      description: "",
+      bullets: [
+        "Built a hospital business intelligence platform for real-time monitoring of patient flow, revenue, and resource allocation",
+        "Designed and optimized ETL pipelines feeding Power BI dashboards, leading to operational cost savings",
+        "Published research on improving healthcare delivery through BI and real-time analytics"
+      ],
       icon: "/images/logos/scorg.png"
     },
     {
       title: "Software Development Intern",
       organization: "DroneAcharya Aerial Innovations Ltd",
       period: "Nov 2022 - Feb 2023",
-      description: "Developed drone-based spatial data collection system using AngularJS and Node.js. Integrated GIS databases for enhanced geospatial accuracy.",
+      location: "Internship · On-site",
+      description: "",
+      bullets: [
+        "Developed a drone-based spatial data collection system using AngularJS and Node.js",
+        "Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency"
+      ],
       icon: "/images/logos/droneacharya.png"
     },
     {
       title: "Co-Head - Development Team & Android Lead",
       organization: "Google Developer Student Clubs (GDSC)",
       period: "Sep 2021 - Jul 2022",
-      description: "Spearheaded Android development initiatives. Mentored students, conducted workshops, and co-built GDSC website promoting open-source collaboration.",
+      location: "Part-time",
+      description: "",
+      bullets: [
+        "Spearheaded Android development initiatives, including a community app featured by Google Developer Groups",
+        "Mentored students, conducted hands-on workshops, and co-built the GDSC website, promoting open-source collaboration and learning"
+      ],
       icon: "/images/logos/gdsc.png"
     }
   ];
@@ -122,24 +230,44 @@ export default function AboutSection() {
       title: "Vice President",
       organization: "EnVision UTD · University of Texas at Dallas",
       period: "Oct 2024 - May 2025",
-      description: "Led a data visualization student organization focused on industry collaboration, technical workshops, and Tableau-sponsored events. Facilitated professional development for 200+ students through interactive learning initiatives and real-world analytics use cases.",
+      description: "",
+      bullets: [
+        "Led a data visualization student organization focused on industry collaboration, technical workshops, and Tableau-sponsored events",
+        "Facilitated professional development for 200+ students through interactive learning initiatives and real-world analytics use cases"
+      ],
       icon: "/images/logos/envision-utd.png"
     },
     {
       title: "Co-Head - Development Team",
       organization: "Google Developer Student Clubs (GDSC)",
       period: "Sep 2021 - Jul 2022",
-      description: "Directed multi-domain tech initiatives across Android, web, and cloud by leading the core development team. Co-developed a community Android app featured by Google's official dev platforms and mentored peers in full-stack development.",
+      description: "",
+      bullets: [
+        "Directed multi-domain tech initiatives across Android, web, and cloud by leading the core development team",
+        "Co-developed a community Android app featured by Google's official dev platforms and mentored peers in full-stack development"
+      ],
       icon: "/images/logos/gdsc-dev.png"
     },
     {
       title: "Android Lead",
       organization: "Google Developer Student Clubs (GDSC)",
       period: "Sep 2021 - Jul 2022",
-      description: "Headed Android development activities and technical mentorship sessions. Organized hands-on coding workshops and contributed to open-source projects supporting student learning and engagement.",
+      description: "",
+      bullets: [
+        "Headed Android development activities and technical mentorship sessions",
+        "Organized hands-on coding workshops and contributed to open-source projects supporting student learning and engagement"
+      ],
       icon: "/images/logos/gdsc-android.png"
     }
   ];
+
+  const publication: Publication = {
+    title: "Enhancing Healthcare Outcomes through Business Intelligence and Real-Time Analytics",
+    journal: "IJECBS",
+    date: "July 2022",
+    summary: "This research explores the integration of business intelligence systems and real-time analytics to improve healthcare delivery, operational efficiency, and patient outcomes in hospital environments.",
+    url: "https://www.ijecbs.com/July2022/4.pdf"
+  };
 
   return (
     <section id="about" className="section-padding bg-[var(--portfolio-secondary)]">
@@ -148,33 +276,68 @@ export default function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">About</span> Me
           </h2>
-          <p className="text-xl text-[var(--portfolio-text-secondary)] max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--portfolio-text-secondary)] max-w-3xl mx-auto mb-12">
             Passionate about creating innovative solutions and pushing the boundaries of modern web development
           </p>
         </div>
         
-        <div className="grid xl:grid-cols-2 gap-12">
-          {/* Professional Experience - Takes 1 column (half) */}
-          <SectionCard
-            icon={<Briefcase className="text-[var(--portfolio-text-primary)]" size={28} />}
-            title="Professional Experience"
-            items={professionalExperience}
-          />
-          
-          {/* Education and Leadership - Takes 1 column (half) */}
-          <div className="space-y-12">
-            <SectionCard
-              icon={<GraduationCap className="text-[var(--portfolio-text-primary)]" size={28} />}
-              title="Education"
-              items={education}
-            />
-            
-            <SectionCard
-              icon={<Users className="text-[var(--portfolio-text-primary)]" size={28} />}
-              title="Leadership Experience"
-              items={leadership}
-            />
+        {/* Impact Highlights */}
+        <ImpactHighlights />
+        
+        {/* Professional Experience */}
+        <div className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+              <Briefcase className="text-[var(--portfolio-text-primary)]" size={24} />
+            </div>
+            <h3 className="text-3xl font-bold gradient-text">Professional Experience</h3>
           </div>
+          <div className="grid lg:grid-cols-2 gap-6">
+            {professionalExperience.map((item, index) => (
+              <ExperienceCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+        
+        {/* Education */}
+        <div className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+              <GraduationCap className="text-[var(--portfolio-text-primary)]" size={24} />
+            </div>
+            <h3 className="text-3xl font-bold gradient-text">Education</h3>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-6">
+            {education.map((item, index) => (
+              <ExperienceCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+        
+        {/* Leadership Experience */}
+        <div className="mb-16">
+          <div className="flex items-center mb-8">
+            <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+              <Users className="text-[var(--portfolio-text-primary)]" size={24} />
+            </div>
+            <h3 className="text-3xl font-bold gradient-text">Leadership Experience</h3>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-6">
+            {leadership.map((item, index) => (
+              <ExperienceCard key={index} item={item} />
+            ))}
+          </div>
+        </div>
+        
+        {/* Publication */}
+        <div className="mb-8">
+          <div className="flex items-center mb-8">
+            <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4">
+              <BookOpen className="text-[var(--portfolio-text-primary)]" size={24} />
+            </div>
+            <h3 className="text-3xl font-bold gradient-text">Research Publication</h3>
+          </div>
+          <PublicationCard publication={publication} />
         </div>
       </div>
     </section>
