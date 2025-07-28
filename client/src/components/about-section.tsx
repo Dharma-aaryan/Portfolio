@@ -122,7 +122,7 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
         </div>
       )}
       <div className="flex-1 min-w-0">
-        <h4 className="text-xl font-bold text-[var(--portfolio-accent)] mb-3 leading-tight">{item.title}</h4>
+        <h4 className="text-xl font-bold text-[hsl(195,100%,50%)] mb-3 leading-tight">{item.title}</h4>
         <p className="text-base mb-1">
           <span className="text-[var(--portfolio-accent)] font-medium">{item.organization}</span> • 
           <span className="text-[var(--portfolio-text-primary)] font-medium"> {item.period}</span>
