@@ -193,18 +193,6 @@ export default function AboutSection() {
         "Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency"
       ],
       icon: "/images/logos/droneacharya.png"
-    },
-    {
-      title: "Co-Head - Development Team & Android Lead",
-      organization: "Google Developer Student Clubs (GDSC)",
-      period: "Sep 2021 - Jul 2022",
-      location: "Part-time",
-      description: "",
-      bullets: [
-        "Spearheaded Android development initiatives, including a community app featured by Google Developer Groups",
-        "Mentored students, conducted hands-on workshops, and co-built the GDSC website, promoting open-source collaboration and learning"
-      ],
-      icon: "/images/logos/gdsc.png"
     }
   ];
 
@@ -292,7 +280,7 @@ export default function AboutSection() {
             </div>
             <h3 className="text-3xl font-bold gradient-text">Professional Experience</h3>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className={`grid gap-6 ${professionalExperience.length % 2 === 1 ? 'lg:grid-cols-2 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:max-w-2xl [&>*:last-child]:lg:mx-auto' : 'lg:grid-cols-2'}`}>
             {professionalExperience.map((item, index) => (
               <ExperienceCard key={index} item={item} />
             ))}
@@ -307,7 +295,7 @@ export default function AboutSection() {
             </div>
             <h3 className="text-3xl font-bold gradient-text">Education</h3>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className={`grid gap-6 ${education.length % 2 === 1 ? 'lg:grid-cols-2 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:max-w-2xl [&>*:last-child]:lg:mx-auto' : 'lg:grid-cols-2'}`}>
             {education.map((item, index) => (
               <ExperienceCard key={index} item={item} />
             ))}
@@ -322,7 +310,7 @@ export default function AboutSection() {
             </div>
             <h3 className="text-3xl font-bold gradient-text">Leadership Experience</h3>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className={`grid gap-6 ${leadership.length % 2 === 1 ? 'lg:grid-cols-2 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:max-w-2xl [&>*:last-child]:lg:mx-auto' : 'lg:grid-cols-2'}`}>
             {leadership.map((item, index) => (
               <ExperienceCard key={index} item={item} />
             ))}
