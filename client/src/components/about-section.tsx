@@ -107,10 +107,10 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
 );
 
 const TabCard = ({ item }: { item: ExperienceItem }) => (
-  <div className="bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg hover:shadow-xl transition-all duration-300">
-    <div className="flex items-start space-x-4">
+  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-none">
+    <div className="flex items-start space-x-6">
       {item.icon && (
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
+        <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
           <img 
             src={item.icon} 
             alt={`${item.organization} logo`}
@@ -122,36 +122,36 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
         </div>
       )}
       <div className="flex-1 min-w-0">
-        <h4 className="text-lg font-bold text-[var(--portfolio-accent)] mb-2 leading-tight">{item.title}</h4>
-        <p className="text-[var(--portfolio-text-primary)] font-medium mb-1 text-sm">
+        <h4 className="text-xl font-bold text-[var(--portfolio-accent)] mb-3 leading-tight">{item.title}</h4>
+        <p className="text-[var(--portfolio-text-primary)] font-medium mb-1 text-base">
           {item.organization} • {item.period}
           {item.location && ` • ${item.location}`}
         </p>
         {item.bullets && item.bullets.length > 0 ? (
-          <ul className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed space-y-1 mt-3">
+          <ul className="text-base text-[var(--portfolio-text-secondary)] leading-relaxed space-y-2 mt-4">
             {item.bullets.map((bullet, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-[var(--portfolio-accent)] mr-2 mt-1">•</span>
+                <span className="text-[var(--portfolio-accent)] mr-3 mt-1">•</span>
                 <span>{bullet}</span>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed mt-3">
+          <p className="text-base text-[var(--portfolio-text-secondary)] leading-relaxed mt-4">
             {item.description}
           </p>
         )}
         
-        {/* Special handling for publications */}
+        {/* Special handling for publications - matching certification button style */}
         {item.type === 'publication' && (
           <a 
             href="https://www.ijecbs.com/July2022/4.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-[var(--portfolio-accent)] text-[var(--portfolio-primary)] px-4 py-2 rounded-lg font-medium hover:bg-[var(--portfolio-accent)]/90 transition-colors duration-300 mt-4"
+            className="mt-6 inline-flex bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 items-center space-x-2 group/button"
           >
             <span>View Publication</span>
-            <ExternalLink size={16} />
+            <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />
           </a>
         )}
       </div>
@@ -423,8 +423,8 @@ export default function AboutSection() {
           </div>
           
           {/* Tab Content */}
-          <div className="max-w-6xl mx-auto">
-            <div className={`grid gap-6 ${getCurrentTabData().length % 2 === 1 ? 'lg:grid-cols-2 [&>*:last-child]:lg:col-span-2 [&>*:last-child]:lg:max-w-2xl [&>*:last-child]:lg:mx-auto' : 'lg:grid-cols-2'}`}>
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col space-y-6">
               {getCurrentTabData().map((item, index) => (
                 <TabCard key={index} item={item} />
               ))}
