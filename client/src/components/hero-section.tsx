@@ -25,8 +25,8 @@ export default function HeroSection() {
           {/* Left side - Text content */}
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-              <span className="gradient-text">Technology Generalist</span><br />
-              <span className="text-[var(--portfolio-text-primary)]">Data • Software • Product</span>
+              <span className="gradient-text whitespace-nowrap">Technology Generalist</span><br />
+              <span className="text-[var(--portfolio-text-primary)] whitespace-nowrap">Data • Software • Product</span>
             </h1>
             <p className="text-xl md:text-2xl text-[var(--portfolio-text-secondary)] font-light leading-relaxed mb-8">
               Driving innovation through scalable software, data-driven systems, and user-focused digital solutions, to enhance business processes and drive business growth.
