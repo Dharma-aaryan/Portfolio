@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
               <span className="gradient-text whitespace-nowrap">Technology Generalist</span><br />
               <span className="text-[var(--portfolio-text-primary)] whitespace-nowrap">Data • Software • Product</span>
             </h1>

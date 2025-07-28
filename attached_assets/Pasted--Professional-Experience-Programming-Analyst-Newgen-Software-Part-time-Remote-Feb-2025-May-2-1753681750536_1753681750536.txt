@@ -1,0 +1,62 @@
+💼 Professional Experience
+Programming Analyst
+Newgen Software · Part-time · Remote
+Feb 2025 – May 2025
+
+Engineered a dynamic web interface using ReactJS to streamline data configuration workflows, improving efficiency by 35%.
+
+Developed a low-code/no-code drag-and-drop form builder that empowered non-technical users to build and manage complex forms independently.
+
+Consulting Business Analyst
+Synapse ITS · Apprenticeship · Remote
+Feb 2025 – May 2025
+
+Designed a strategic analytics roadmap to integrate APS systems with organization-wide KPIs.
+
+Improved data flow and reporting quality by aligning pipelines with business needs, reducing operational latency by 17%.
+
+Vice President
+EnVision UTD · Part-time
+Oct 2024 – May 2025
+
+Led organizational growth through technical events and Tableau-sponsored workshops, fostering collaboration among 200+ students and professionals in data analytics and visualization.
+
+Data and BI Analyst
+SCORG Technologies Pvt Ltd · Internship · Hybrid
+Aug 2022 – May 2023
+
+Built a hospital business intelligence platform for real-time monitoring of patient flow, revenue, and resource allocation.
+
+Designed and optimized ETL pipelines feeding Power BI dashboards, leading to operational cost savings.
+
+Published research on improving healthcare delivery through BI and real-time analytics. Paper
+
+Software Development Intern
+DroneAcharya Aerial Innovations Ltd. · Internship · On-site
+Nov 2022 – Feb 2023
+
+Developed a drone-based spatial data collection system using AngularJS and Node.js.
+
+Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency.
+
+Programming Intern
+SCORG Technologies Pvt Ltd · Internship
+Feb 2022 – Apr 2022
+
+Implemented document preprocessing and OCR-based automation using Python for scalable data extraction and analysis.
+
+Development Intern
+Task Consultants Pvt. Ltd. · Internship · Hybrid
+Jul 2021 – Sep 2021
+
+Designed and deployed an Android application for center management, integrated with Firebase for real-time database access.
+
+Built as a case study solution for the Maharashtra Business Training Board (MBTB).
+
+Co-Head - Development Team & Android Lead
+Google Developer Student Clubs (GDSC) · Part-time
+Sep 2021 – Jul 2022
+
+Spearheaded Android development initiatives, including a community app featured by Google Developer Groups.
+
+Mentored students, conducted hands-on workshops, and co-built the GDSC website, promoting open-source collaboration and learning.
