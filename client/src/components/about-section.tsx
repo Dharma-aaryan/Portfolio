@@ -16,20 +16,20 @@ interface SectionCardProps {
 }
 
 const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) => (
-  <div className={`bg-[var(--portfolio-primary)]/50 p-5 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift ${className}`}>
-    <div className="flex items-center mb-5">
-      <div className="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center mr-3">
+  <div className={`bg-[var(--portfolio-primary)]/50 p-8 rounded-3xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg ${className}`}>
+    <div className="flex items-center mb-8">
+      <div className="w-14 h-14 gradient-bg rounded-2xl flex items-center justify-center mr-4 shadow-md">
         {icon}
       </div>
-      <h3 className="text-lg font-bold">{title}</h3>
+      <h3 className="text-2xl font-bold gradient-text">{title}</h3>
     </div>
     
-    <div className="space-y-4">
+    <div className="space-y-6">
       {items.map((item, index) => (
-        <div key={index} className="border-l-2 border-[var(--portfolio-accent)] pl-4">
-          <div className="flex items-start space-x-3">
+        <div key={index} className="bg-[var(--portfolio-secondary)]/30 p-6 rounded-2xl border-l-4 border-[var(--portfolio-accent)] hover:bg-[var(--portfolio-secondary)]/50 transition-colors duration-300">
+          <div className="flex items-start space-x-4">
             {item.icon && (
-              <div className="flex-shrink-0 w-7 h-7 rounded-lg overflow-hidden bg-white p-1 mt-0.5">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
                 <img 
                   src={item.icon} 
                   alt={`${item.organization} logo`}
@@ -40,10 +40,10 @@ const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) =
                 />
               </div>
             )}
-            <div className="flex-1">
-              <h4 className="text-sm font-semibold text-[var(--portfolio-accent)] mb-1">{item.title}</h4>
-              <p className="text-[var(--portfolio-text-secondary)] mb-1 text-xs">{item.organization} • {item.period}</p>
-              <p className="text-xs text-[var(--portfolio-text-secondary)] leading-relaxed">
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg font-bold text-[var(--portfolio-accent)] mb-2 leading-tight">{item.title}</h4>
+              <p className="text-[var(--portfolio-text-primary)] font-medium mb-2 text-sm">{item.organization} • {item.period}</p>
+              <p className="text-sm text-[var(--portfolio-text-secondary)] leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -153,24 +153,24 @@ export default function AboutSection() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid xl:grid-cols-2 gap-12">
           {/* Professional Experience - Takes 1 column (half) */}
           <SectionCard
-            icon={<Briefcase className="text-[var(--portfolio-text-primary)]" size={24} />}
+            icon={<Briefcase className="text-[var(--portfolio-text-primary)]" size={28} />}
             title="Professional Experience"
             items={professionalExperience}
           />
           
           {/* Education and Leadership - Takes 1 column (half) */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             <SectionCard
-              icon={<GraduationCap className="text-[var(--portfolio-text-primary)]" size={24} />}
+              icon={<GraduationCap className="text-[var(--portfolio-text-primary)]" size={28} />}
               title="Education"
               items={education}
             />
             
             <SectionCard
-              icon={<Users className="text-[var(--portfolio-text-primary)]" size={24} />}
+              icon={<Users className="text-[var(--portfolio-text-primary)]" size={28} />}
               title="Leadership Experience"
               items={leadership}
             />
