@@ -57,46 +57,46 @@ const SectionCard = ({ icon, title, items, className = "" }: SectionCardProps) =
 export default function AboutSection() {
   const professionalExperience: ExperienceItem[] = [
     {
-      title: "Senior Full Stack Developer",
-      organization: "TechCorp Solutions",
-      period: "2022 - Present",
-      description: "Leading development of scalable web applications using modern frameworks and cloud technologies.",
-      icon: "/images/logos/techcorp.png"
+      title: "Programming Analyst",
+      organization: "Newgen Software",
+      period: "Feb 2025 - May 2025",
+      description: "Engineered dynamic web interface using ReactJS, improving efficiency by 35%. Developed low-code/no-code drag-and-drop form builder for non-technical users.",
+      icon: "/images/logos/newgen.png"
     },
     {
-      title: "Frontend Developer",
-      organization: "Digital Innovations",
-      period: "2020 - 2022",
-      description: "Developed responsive user interfaces and collaborated with cross-functional teams.",
-      icon: "/images/logos/digital-innovations.png"
+      title: "Consulting Business Analyst",
+      organization: "Synapse ITS",
+      period: "Feb 2025 - May 2025",
+      description: "Designed strategic analytics roadmap to integrate APS systems with organization-wide KPIs. Reduced operational latency by 17%.",
+      icon: "/images/logos/synapse.png"
     },
     {
-      title: "Software Engineer Intern",
-      organization: "StartupHub",
-      period: "Summer 2019",
-      description: "Built microservices and APIs for customer-facing applications.",
-      icon: "/images/logos/startuphub.png"
+      title: "Vice President",
+      organization: "EnVision UTD",
+      period: "Oct 2024 - May 2025",
+      description: "Led organizational growth through technical events and Tableau-sponsored workshops, fostering collaboration among 200+ students and professionals.",
+      icon: "/images/logos/envision.png"
     },
     {
-      title: "Web Developer",
-      organization: "Freelance",
-      period: "2018 - 2020",
-      description: "Created custom websites and e-commerce solutions for small businesses.",
-      icon: "/images/logos/freelance.png"
+      title: "Data and BI Analyst",
+      organization: "SCORG Technologies Pvt Ltd",
+      period: "Aug 2022 - May 2023",
+      description: "Built hospital business intelligence platform for real-time monitoring. Designed and optimized ETL pipelines feeding Power BI dashboards.",
+      icon: "/images/logos/scorg.png"
     },
     {
-      title: "Junior Developer",
-      organization: "CodeWorks Inc",
-      period: "2017 - 2018",
-      description: "Assisted in maintaining legacy systems and implementing new features.",
-      icon: "/images/logos/codeworks.png"
+      title: "Software Development Intern",
+      organization: "DroneAcharya Aerial Innovations Ltd",
+      period: "Nov 2022 - Feb 2023",
+      description: "Developed drone-based spatial data collection system using AngularJS and Node.js. Integrated GIS databases for enhanced geospatial accuracy.",
+      icon: "/images/logos/droneacharya.png"
     },
     {
-      title: "Technical Support Specialist",
-      organization: "TechSupport Pro",
-      period: "2016 - 2017",
-      description: "Provided technical support and troubleshooting for software applications.",
-      icon: "/images/logos/techsupport.png"
+      title: "Co-Head - Development Team & Android Lead",
+      organization: "Google Developer Student Clubs (GDSC)",
+      period: "Sep 2021 - Jul 2022",
+      description: "Spearheaded Android development initiatives. Mentored students, conducted workshops, and co-built GDSC website promoting open-source collaboration.",
+      icon: "/images/logos/gdsc.png"
     }
   ];
 
