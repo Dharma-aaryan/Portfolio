@@ -24,12 +24,12 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left side - Text content */}
           <div className="text-center md:text-left">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              <span className="gradient-text">Full Stack</span><br />
-              <span className="text-[var(--portfolio-text-primary)]">Developer</span>
+            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+              <span className="gradient-text">🚀 Technology Generalist</span><br />
+              <span className="text-[var(--portfolio-text-primary)]">Software • Data • Product</span>
             </h1>
             <p className="text-xl md:text-2xl text-[var(--portfolio-text-secondary)] font-light leading-relaxed mb-8">
-              Crafting exceptional digital experiences through innovative technology solutions
+              Driving innovation through scalable software, data-driven systems, and user-focused digital products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button 
