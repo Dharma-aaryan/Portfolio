@@ -3,50 +3,50 @@ import { ExternalLink, Github } from "lucide-react";
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution built with React, Node.js, and AWS services.",
+      title: "🧾 Drag-and-Drop Form Builder",
+      description: "Low-code/no-code platform to streamline form creation for non-technical users. Built using ReactJS and Node.js, this dynamic interface enabled real-time backend integration and improved configuration efficiency by 35%. Designed for reusability across 10+ workflows, empowering business users to independently manage form logic and layouts.",
       image: "/images/project1.jpg",
-      tech: ["React", "Node.js", "AWS"],
+      tech: ["ReactJS", "Node.js", "Low-Code"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "AI Dashboard",
-      description: "Machine learning analytics dashboard with real-time data visualization.",
+      title: "📊 Hospital BI Platform",
+      description: "Real-time analytics solution to monitor operations and patient flow. Developed ETL pipelines and Power BI dashboards for multi-source hospital data. Enabled administrators to track revenue and optimize resource use, contributing to a published healthcare analytics paper.",
       image: "/images/project2.jpg",
-      tech: ["Python", "TensorFlow", "D3.js"],
+      tech: ["Power BI", "ETL", "Healthcare Analytics"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Mobile App",
-      description: "Cross-platform mobile application with offline capabilities and sync.",
+      title: "🛰 Drone-Based Spatial Data Platform",
+      description: "Geospatial intelligence platform for infrastructure mapping. Developed using AngularJS, Node.js, and MongoDB, integrating GIS logic to enhance location accuracy by 15%. Enabled visualization and automation of field-collected data for real-time operational planning.",
       image: "/images/project3.jpg",
-      tech: ["React Native", "Firebase", "Redux"],
+      tech: ["AngularJS", "Node.js", "MongoDB", "GIS"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable microservices architecture deployed on Kubernetes with CI/CD pipeline.",
+      title: "📦 APS Data Integration & Process Mining",
+      description: "Enterprise analytics strategy for retail and supply chain optimization. Integrated APS systems and defined KPIs to streamline reporting and reduce latency by 17%. Collaborated across teams to align data architecture with business goals.",
       image: "/images/project4.jpg",
-      tech: ["Docker", "Kubernetes", "Jenkins"],
+      tech: ["APS Systems", "Process Mining", "KPIs"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Data Analytics Platform",
-      description: "Real-time data processing system with interactive dashboards and reporting.",
+      title: "👥 Customer Segmentation and Targeting",
+      description: "Clustering and persona creation for targeted outreach. Used Python, Pandas, and scikit-learn to segment customer datasets based on behavior and demographics. Created actionable profiles to optimize marketing strategies and improve engagement rates.",
       image: "/images/project5.jpg",
-      tech: ["Apache Kafka", "PostgreSQL", "React"],
+      tech: ["Python", "Pandas", "scikit-learn"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "IoT Management System",
-      description: "IoT device management platform with real-time monitoring and control.",
+      title: "📱 Center Management Android App",
+      description: "Mobile application to support administrative workflows. Built in Java with Firebase backend as part of a government training initiative. Simplified task tracking and communication for regional center management teams.",
       image: "/images/project6.jpg",
-      tech: ["IoT", "MQTT", "Node.js"],
+      tech: ["Java", "Firebase", "Android"],
       liveUrl: "#",
       githubUrl: "#"
     }
@@ -60,7 +60,7 @@ export default function ProjectsSection() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-[var(--portfolio-text-secondary)] max-w-3xl mx-auto">
-            A collection of innovative solutions and creative implementations
+            A collection of impactful, real-world projects across software engineering, data pipelines, and business intelligence.
           </p>
         </div>
         
