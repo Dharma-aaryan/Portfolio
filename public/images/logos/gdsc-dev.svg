@@ -1,10 +1,12 @@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <rect width="200" height="200" fill="#ffffff"/>
-  <circle cx="60" cy="60" r="15" fill="#4285f4"/>
-  <circle cx="100" cy="60" r="15" fill="#ea4335"/>
-  <circle cx="140" cy="60" r="15" fill="#fbbc04"/>
-  <circle cx="80" cy="100" r="15" fill="#34a853"/>
-  <circle cx="120" cy="100" r="15" fill="#9aa0a6"/>
-  <text x="100" y="140" text-anchor="middle" fill="#5f6368" font-family="Arial, sans-serif" font-size="14" font-weight="bold">GDSC</text>
-  <text x="100" y="160" text-anchor="middle" fill="#5f6368" font-family="Arial, sans-serif" font-size="12">Development</text>
+  <!-- Google colors arranged in GDSC pattern -->
+  <circle cx="100" cy="80" r="20" fill="#4285f4"/>
+  <circle cx="70" cy="100" r="15" fill="#ea4335"/>
+  <circle cx="130" cy="100" r="15" fill="#fbbc04"/>
+  <circle cx="100" cy="120" r="15" fill="#34a853"/>
+  <!-- Text -->
+  <text x="100" y="155" text-anchor="middle" fill="#5f6368" font-family="Google Sans, Arial, sans-serif" font-size="16" font-weight="500">Google Developer</text>
+  <text x="100" y="170" text-anchor="middle" fill="#5f6368" font-family="Google Sans, Arial, sans-serif" font-size="16" font-weight="500">Student Clubs</text>
+  <text x="100" y="185" text-anchor="middle" fill="#9aa0a6" font-family="Arial, sans-serif" font-size="12">Development Team</text>
 </svg>
