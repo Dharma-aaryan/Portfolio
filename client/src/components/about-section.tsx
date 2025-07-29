@@ -107,7 +107,7 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
 );
 
 const TabCard = ({ item }: { item: ExperienceItem }) => (
-  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-[0_8px_30px_rgba(0,191,255,0.15)] hover:shadow-[0_20px_60px_rgba(0,191,255,0.25)] transition-all duration-300 w-full max-w-none">
+  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift hover:shadow-[0_20px_60px_rgba(0,191,255,0.25)] transition-all duration-300 w-full max-w-none cursor-pointer">
     <div className="flex items-start space-x-6">
       {item.icon && (
         <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
@@ -149,7 +149,7 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
             href="https://www.ijecbs.com/July2022/4.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 items-center space-x-2 group/button"
+            className="mt-6 inline-flex bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 items-center space-x-2 group/button cursor-pointer"
           >
             <span>View Publication</span>
             <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />
@@ -432,7 +432,7 @@ export default function AboutSection() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[var(--portfolio-accent)] text-[var(--portfolio-primary)] shadow-lg scale-105'
                     : 'bg-[var(--portfolio-primary)]/50 text-[var(--portfolio-text-secondary)] hover:bg-[var(--portfolio-secondary)]/50 hover:text-[var(--portfolio-text-primary)] border border-[var(--portfolio-secondary)]'
