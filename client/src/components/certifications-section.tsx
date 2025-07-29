@@ -1,4 +1,4 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink, Calendar } from "lucide-react";
 
 interface Certification {
   id: string;
@@ -126,9 +126,13 @@ export default function CertificationsSection() {
                 <h3 className="text-lg font-bold text-[var(--portfolio-text-primary)] mb-3 leading-tight min-h-[3.5rem] flex items-start">
                   {cert.title}
                 </h3>
-                <p className="text-[var(--portfolio-accent)] font-medium mb-4">
+                <p className="text-[var(--portfolio-accent)] font-medium mb-3">
                   {cert.issuer}
                 </p>
+                <div className="flex items-center text-[var(--portfolio-text-secondary)] text-sm mb-4">
+                  <Calendar size={16} className="mr-2" />
+                  <span>Issued: {cert.issueDate}</span>
+                </div>
               </div>
               
               {/* Show credential button */}

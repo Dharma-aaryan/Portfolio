@@ -1,0 +1,6 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#1a1b3a"/>
+  <circle cx="100" cy="80" r="30" fill="#00bfff" opacity="0.8"/>
+  <rect x="70" y="110" width="60" height="40" rx="8" fill="#00bfff" opacity="0.6"/>
+  <text x="100" y="170" text-anchor="middle" fill="#00bfff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">EnVision</text>
+</svg>

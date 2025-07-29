@@ -315,44 +315,44 @@ export default function AboutSection() {
     {
       title: "Vice President",
       organization: "EnVision UTD",
-      period: "Oct 2024 - May 2025",
-      location: "Part-time",
+      period: "Oct 2023 - May 2025",
+      location: "",
       description: "",
       type: "leadership",
-      startDate: "2024-10",
+      startDate: "2023-10",
       bullets: [
         "Led organizational growth through technical events and Tableau-sponsored workshops",
         "Fostered collaboration among 200+ students and professionals in data analytics and visualization"
       ],
-      icon: "/images/logos/envision.png"
+      icon: "/images/logos/envision.svg"
     },
     {
       title: "Co-Head - Development Team",
       organization: "Google Developer Student Clubs (GDSC)",
-      period: "Sep 2021 - Jul 2022",
-      location: "Part-time",
+      period: "Sep 2020 - May 2022",
+      location: "",
       description: "",
       type: "leadership",
-      startDate: "2021-09",
+      startDate: "2020-09",
       bullets: [
         "Directed multi-domain tech initiatives across Android, web, and cloud by leading the core development team",
         "Co-developed a community Android app featured by Google's official dev platforms and mentored peers in full-stack development"
       ],
-      icon: "/images/logos/gdsc-dev.png"
+      icon: "/images/logos/gdsc-dev.svg"
     },
     {
       title: "Android Lead",
       organization: "Google Developer Student Clubs (GDSC)",
-      period: "Sep 2021 - Jul 2022",
-      location: "Part-time",
+      period: "Sep 2020 - May 2022",
+      location: "",
       description: "",
       type: "leadership",
-      startDate: "2021-09",
+      startDate: "2020-09",
       bullets: [
         "Headed Android development activities and technical mentorship sessions",
         "Organized hands-on coding workshops and contributed to open-source projects supporting student learning and engagement"
       ],
-      icon: "/images/logos/gdsc-android.png"
+      icon: "/images/logos/gdsc-android.svg"
     }
   ];
 
