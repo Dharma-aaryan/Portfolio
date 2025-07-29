@@ -107,7 +107,7 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
 );
 
 const TabCard = ({ item }: { item: ExperienceItem }) => (
-  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgb(0,0,0,0.2)] transition-all duration-300 w-full max-w-none">
+  <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-[0_8px_30px_rgba(0,191,255,0.15)] hover:shadow-[0_20px_60px_rgba(0,191,255,0.25)] transition-all duration-300 w-full max-w-none">
     <div className="flex items-start space-x-6">
       {item.icon && (
         <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-white p-2 mt-1 shadow-sm">
