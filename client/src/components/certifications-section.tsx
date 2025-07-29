@@ -112,7 +112,7 @@ export default function CertificationsSection() {
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className="bg-[var(--portfolio-secondary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift group"
+              className="bg-[var(--portfolio-secondary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift group cursor-pointer"
             >
               {/* Header with icon */}
               <div className="flex items-center mb-4">
@@ -145,7 +145,7 @@ export default function CertificationsSection() {
                 href={cert.credentialUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-4 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center justify-center space-x-2 group/button"
+                className="w-full bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-4 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center justify-center space-x-2 group/button cursor-pointer"
               >
                 <span>Show Credential</span>
                 <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />

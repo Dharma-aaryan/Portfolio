@@ -26,7 +26,7 @@ export default function NavigationHeader() {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 cursor-pointer ${
                 activeSection === 'about' 
                   ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
                   : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
@@ -36,7 +36,7 @@ export default function NavigationHeader() {
             </button>
             <button 
               onClick={() => scrollToSection('certifications')}
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 cursor-pointer ${
                 activeSection === 'certifications' 
                   ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
                   : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
@@ -46,7 +46,7 @@ export default function NavigationHeader() {
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 cursor-pointer ${
                 activeSection === 'projects' 
                   ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
                   : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
@@ -56,7 +56,7 @@ export default function NavigationHeader() {
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className={`transition-colors duration-300 ${
+              className={`transition-colors duration-300 cursor-pointer ${
                 activeSection === 'contact' 
                   ? 'text-[var(--portfolio-accent)] border-b-2 border-[var(--portfolio-accent)]' 
                   : 'text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)]'
@@ -68,7 +68,7 @@ export default function NavigationHeader() {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-[var(--portfolio-text-primary)]"
+            className="md:hidden text-[var(--portfolio-text-primary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 cursor-pointer"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,25 +81,25 @@ export default function NavigationHeader() {
             <div className="flex flex-col space-y-4 pt-4">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
+                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left cursor-pointer"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('certifications')}
-                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
+                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left cursor-pointer"
               >
                 Certifications
               </button>
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
+                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left cursor-pointer"
               >
                 Projects
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left"
+                className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300 text-left cursor-pointer"
               >
                 Contact
               </button>

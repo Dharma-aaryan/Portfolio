@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -60,58 +60,35 @@ export default function ContactSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
-                <Mail className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Email</h3>
-                <p className="text-[var(--portfolio-text-secondary)]">aaryan@example.com</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
-                <Phone className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Phone</h3>
-                <p className="text-[var(--portfolio-text-secondary)]">+1 (555) 123-4567</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
-                <MapPin className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">Location</h3>
-                <p className="text-[var(--portfolio-text-secondary)]">San Francisco, CA</p>
-              </div>
-            </div>
-            
-            <div className="flex space-x-4 pt-4">
-              <a 
-                href="#" 
-                className="w-12 h-12 bg-[var(--portfolio-secondary)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] transition-colors duration-300"
-              >
-                <Linkedin className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </a>
-              <a 
-                href="#" 
-                className="w-12 h-12 bg-[var(--portfolio-secondary)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] transition-colors duration-300"
-              >
-                <Github className="text-[var(--portfolio-text-primary)] text-xl" size={24} />
-              </a>
-
-            </div>
+        <div className="max-w-2xl mx-auto">
+          {/* Contact Icons */}
+          <div className="flex justify-center items-center space-x-8 mb-12">
+            <a 
+              href="https://linkedin.com/in/aaryandharmadhikari" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+            >
+              <Linkedin className="text-[var(--portfolio-text-primary)]" size={28} />
+            </a>
+            <a 
+              href="https://github.com/aaryandharmadhikari" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+            >
+              <Github className="text-[var(--portfolio-text-primary)]" size={28} />
+            </a>
+            <a 
+              href="mailto:aaryandharmadhikari@gmail.com"
+              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+            >
+              <Mail className="text-[var(--portfolio-text-primary)]" size={28} />
+            </a>
           </div>
           
           {/* Contact Form */}
-          <div className="bg-[var(--portfolio-secondary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)]">
+          <div className="bg-[var(--portfolio-secondary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] w-full">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -174,7 +151,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full gradient-bg text-[var(--portfolio-text-primary)] py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full gradient-bg text-[var(--portfolio-text-primary)] py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {contactMutation.isPending ? (
                     <div className="flex items-center justify-center space-x-2">

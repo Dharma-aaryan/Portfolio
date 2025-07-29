@@ -68,7 +68,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-[var(--portfolio-primary)]/50 rounded-2xl overflow-hidden border border-[var(--portfolio-secondary)] hover-lift group"
+              className="bg-[var(--portfolio-primary)]/50 rounded-2xl overflow-hidden border border-[var(--portfolio-secondary)] hover-lift group cursor-pointer"
             >
               <div className="relative overflow-hidden">
                 <img 
