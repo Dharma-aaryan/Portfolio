@@ -151,7 +151,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] py-4 rounded-lg font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full gradient-bg text-[var(--portfolio-text-primary)] py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {contactMutation.isPending ? (
                     <div className="flex items-center justify-center space-x-2">
