@@ -1,4 +1,4 @@
-import { Award, ExternalLink, Calendar } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 interface Certification {
   id: string;
@@ -108,48 +108,41 @@ export default function CertificationsSection() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <div 
               key={index}
-              className="bg-[var(--portfolio-secondary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift group cursor-pointer"
+              className="bg-[var(--portfolio-secondary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift group cursor-pointer flex flex-col h-full"
             >
               {/* Header with icon */}
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                   <Award className="text-[var(--portfolio-text-primary)]" size={24} />
                 </div>
-                <div className="flex-1">
-                  <div className="text-xs text-[var(--portfolio-text-secondary)] mb-1">
-                    ID: {cert.id}
-                  </div>
-                </div>
               </div>
               
               {/* Certification details */}
-              <div className="mb-4">
-                <h3 className="text-lg font-bold text-[var(--portfolio-text-primary)] mb-2 leading-tight">
+              <div className="mb-6 flex-1">
+                <h3 className="text-lg font-bold text-[var(--portfolio-text-primary)] mb-3 leading-tight min-h-[3.5rem] flex items-start">
                   {cert.title}
                 </h3>
-                <p className="text-[var(--portfolio-accent)] font-medium mb-3">
+                <p className="text-[var(--portfolio-accent)] font-medium mb-4">
                   {cert.issuer}
                 </p>
-                <div className="flex items-center text-[var(--portfolio-text-secondary)] text-sm mb-4">
-                  <Calendar size={16} className="mr-2" />
-                  <span>Issued: {cert.issueDate}</span>
-                </div>
               </div>
               
               {/* Show credential button */}
-              <a 
-                href={cert.credentialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-4 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center justify-center space-x-2 group/button cursor-pointer"
-              >
-                <span>Show Credential</span>
-                <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />
-              </a>
+              <div className="mt-auto">
+                <a 
+                  href={cert.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-4 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center justify-center space-x-2 group/button cursor-pointer"
+                >
+                  <span>Show Credential</span>
+                  <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
