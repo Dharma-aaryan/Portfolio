@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToProjects = () => {
@@ -8,12 +8,7 @@ export default function HeroSection() {
     }
   };
 
-  const scrollToNextSection = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+
 
   return (
     <section 
@@ -34,7 +29,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button 
                 onClick={scrollToProjects}
-                className="gradient-bg text-[var(--portfolio-text-primary)] px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 flex items-center space-x-2 justify-center"
+                className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center cursor-pointer"
               >
                 <span>View My Work</span>
                 <ArrowRight size={20} />
@@ -42,7 +37,7 @@ export default function HeroSection() {
               <a 
                 href="/resume.pdf" 
                 download="Aaryan_Dharmadhikari_Resume.pdf"
-                className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center"
+                className="border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 flex items-center space-x-2 justify-center cursor-pointer"
               >
                 <Download size={20} />
                 <span>Download Resume</span>
@@ -70,12 +65,7 @@ export default function HeroSection() {
         </div>
       </div>
       
-      <div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
-        onClick={scrollToNextSection}
-      >
-        <ChevronDown className="text-[var(--portfolio-accent)] text-2xl" size={32} />
-      </div>
+
     </section>
   );
 }

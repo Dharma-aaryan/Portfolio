@@ -67,23 +67,23 @@ export default function ContactSection() {
               href="https://linkedin.com/in/aaryandharmadhikari" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+              className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Linkedin className="text-[var(--portfolio-text-primary)]" size={28} />
+              <Linkedin className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
             </a>
             <a 
               href="https://github.com/aaryandharmadhikari" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+              className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Github className="text-[var(--portfolio-text-primary)]" size={28} />
+              <Github className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
             </a>
             <a 
               href="mailto:aaryandharmadhikari@gmail.com"
-              className="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
+              className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Mail className="text-[var(--portfolio-text-primary)]" size={28} />
+              <Mail className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
             </a>
           </div>
           
@@ -151,7 +151,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit"
                   disabled={contactMutation.isPending}
-                  className="w-full gradient-bg text-[var(--portfolio-text-primary)] py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] py-4 rounded-lg font-semibold hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                   {contactMutation.isPending ? (
                     <div className="flex items-center justify-center space-x-2">

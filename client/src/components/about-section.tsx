@@ -149,7 +149,7 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
             href="https://www.ijecbs.com/July2022/4.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex bg-[var(--portfolio-primary)] border border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 items-center space-x-2 group/button cursor-pointer"
+            className="mt-6 inline-flex border-2 border-[var(--portfolio-accent)] text-[var(--portfolio-accent)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--portfolio-accent)] hover:text-[var(--portfolio-primary)] transition-all duration-300 items-center space-x-2 group/button cursor-pointer"
           >
             <span>View Publication</span>
             <ExternalLink size={16} className="group-hover/button:translate-x-1 transition-transform duration-300" />
