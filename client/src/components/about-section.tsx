@@ -205,7 +205,7 @@ export default function AboutSection() {
         "Engineered a dynamic web interface using ReactJS to streamline data configuration workflows, improving efficiency by 35%",
         "Developed a low-code/no-code drag-and-drop form builder that empowered non-technical users to build and manage complex forms independently"
       ],
-      icon: undefined
+      icon: "/images/logos/newgen.png"
     },
     {
       title: "Consulting Business Analyst",
@@ -219,7 +219,7 @@ export default function AboutSection() {
         "Designed a strategic analytics roadmap to integrate APS systems with organization-wide KPIs",
         "Improved data flow and reporting quality by aligning pipelines with business needs, reducing operational latency by 17%"
       ],
-      icon: undefined
+      icon: "/images/logos/synapse.png"
     },
     {
       title: "Data and BI Analyst",
@@ -234,7 +234,7 @@ export default function AboutSection() {
         "Designed and optimized ETL pipelines feeding Power BI dashboards, leading to operational cost savings",
         "Published research on improving healthcare delivery through BI and real-time analytics"
       ],
-      icon: undefined
+      icon: "/images/logos/scorg.png"
     },
     {
       title: "Software Development Intern",
@@ -248,7 +248,7 @@ export default function AboutSection() {
         "Developed a drone-based spatial data collection system using AngularJS and Node.js",
         "Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency"
       ],
-      icon: undefined
+      icon: "/images/logos/droneacharya.png"
     },
     {
       title: "Programming Intern",
@@ -262,7 +262,7 @@ export default function AboutSection() {
         "Developed OCR-based document preprocessing in Python",
         "Focused on data cleaning, segmentation, and feature extraction for unstructured documents"
       ],
-      icon: undefined
+      icon: "/images/logos/scorg.png"
     },
     {
       title: "Development Intern",
@@ -276,7 +276,7 @@ export default function AboutSection() {
         "Created an Android app for MBTB's Center Management using Java and Firebase",
         "Improved UI/UX and navigation while streamlining backend operations via Firebase DB"
       ],
-      icon: undefined
+      icon: "/images/logos/task-consultants.png"
     }
   ];
 
