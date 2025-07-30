@@ -75,8 +75,11 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
             src={item.icon} 
             alt={`${item.organization} logo`}
             className="w-full h-full object-contain"
+            onLoad={() => console.log(`Small image loaded: ${item.icon}`)}
             onError={(e) => {
-              e.currentTarget.style.display = 'none';
+              console.error(`Small image failed to load: ${item.icon}`);
+              // Show a placeholder instead of hiding
+              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjNmNGY2Ii8+CjxwYXRoIGQ9Ik0xMiAxNmg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6IiBmaWxsPSIjZDFkNWRiIi8+CjwvcGc+';
             }}
           />
         </div>
@@ -115,8 +118,11 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
             src={item.icon} 
             alt={`${item.organization} logo`}
             className="w-full h-full object-contain"
+            onLoad={() => console.log(`Large image loaded: ${item.icon}`)}
             onError={(e) => {
-              e.currentTarget.style.display = 'none';
+              console.error(`Large image failed to load: ${item.icon}`);
+              // Show a placeholder instead of hiding
+              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjNmNGY2Ii8+CjxwYXRoIGQ9Ik0xMiAxNmg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6IiBmaWxsPSIjZDFkNWRiIi8+CjwvcGc+';
             }}
           />
         </div>
