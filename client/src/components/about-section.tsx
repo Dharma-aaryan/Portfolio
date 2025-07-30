@@ -75,11 +75,8 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
             src={item.icon} 
             alt={`${item.organization} logo`}
             className="w-full h-full object-contain"
-            onLoad={() => console.log(`Small image loaded: ${item.icon}`)}
             onError={(e) => {
-              console.error(`Small image failed to load: ${item.icon}`);
-              // Show a placeholder instead of hiding
-              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjNmNGY2Ii8+CjxwYXRoIGQ9Ik0xMiAxNmg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6IiBmaWxsPSIjZDFkNWRiIi8+CjwvcGc+';
+              e.currentTarget.style.display = 'none';
             }}
           />
         </div>
@@ -118,11 +115,8 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
             src={item.icon} 
             alt={`${item.organization} logo`}
             className="w-full h-full object-contain"
-            onLoad={() => console.log(`Large image loaded: ${item.icon}`)}
             onError={(e) => {
-              console.error(`Large image failed to load: ${item.icon}`);
-              // Show a placeholder instead of hiding
-              e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjZjNmNGY2Ii8+CjxwYXRoIGQ9Ik0xMiAxNmg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6bTYgMGg0djRoLTRWMTZ6IiBmaWxsPSIjZDFkNWRiIi8+CjwvcGc+';
+              e.currentTarget.style.display = 'none';
             }}
           />
         </div>
@@ -211,7 +205,7 @@ export default function AboutSection() {
         "Engineered a dynamic web interface using ReactJS to streamline data configuration workflows, improving efficiency by 35%",
         "Developed a low-code/no-code drag-and-drop form builder that empowered non-technical users to build and manage complex forms independently"
       ],
-      icon: "/images/logos/newgen.png"
+      icon: undefined
     },
     {
       title: "Consulting Business Analyst",
@@ -225,7 +219,7 @@ export default function AboutSection() {
         "Designed a strategic analytics roadmap to integrate APS systems with organization-wide KPIs",
         "Improved data flow and reporting quality by aligning pipelines with business needs, reducing operational latency by 17%"
       ],
-      icon: "/images/logos/synapse.png"
+      icon: undefined
     },
     {
       title: "Data and BI Analyst",
@@ -240,7 +234,7 @@ export default function AboutSection() {
         "Designed and optimized ETL pipelines feeding Power BI dashboards, leading to operational cost savings",
         "Published research on improving healthcare delivery through BI and real-time analytics"
       ],
-      icon: "/images/logos/scorg.png"
+      icon: undefined
     },
     {
       title: "Software Development Intern",
@@ -254,7 +248,7 @@ export default function AboutSection() {
         "Developed a drone-based spatial data collection system using AngularJS and Node.js",
         "Integrated GIS databases and automated spatial workflows to enhance geospatial accuracy and decision-making efficiency"
       ],
-      icon: "/images/logos/droneacharya.png"
+      icon: undefined
     },
     {
       title: "Programming Intern",
@@ -268,7 +262,7 @@ export default function AboutSection() {
         "Developed OCR-based document preprocessing in Python",
         "Focused on data cleaning, segmentation, and feature extraction for unstructured documents"
       ],
-      icon: "/images/logos/scorg.png"
+      icon: undefined
     },
     {
       title: "Development Intern",
@@ -282,7 +276,7 @@ export default function AboutSection() {
         "Created an Android app for MBTB's Center Management using Java and Firebase",
         "Improved UI/UX and navigation while streamlining backend operations via Firebase DB"
       ],
-      icon: "/images/logos/task-consultants.png"
+      icon: undefined
     }
   ];
 
