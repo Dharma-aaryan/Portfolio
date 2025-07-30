@@ -307,7 +307,7 @@ export default function AboutSection() {
         "Graduated with First Class honors, focusing on software development, data structures, and computer systems",
         "Led multiple academic projects in web development, mobile applications, and database management systems"
       ],
-      icon: "/images/logos/sppu.png"
+      icon: "/images/logos/sppu.jpg"
     }
   ];
 
@@ -324,7 +324,7 @@ export default function AboutSection() {
         "Led organizational growth through technical events and Tableau-sponsored workshops",
         "Fostered collaboration among 200+ students and professionals in data analytics and visualization"
       ],
-      icon: "/images/logos/envision.svg"
+      icon: "/images/logos/envision.jpg"
     },
     {
       title: "Co-Head - Development Team",
@@ -338,7 +338,7 @@ export default function AboutSection() {
         "Directed multi-domain tech initiatives across Android, web, and cloud by leading the core development team",
         "Co-developed a community Android app featured by Google's official dev platforms and mentored peers in full-stack development"
       ],
-      icon: "/images/logos/gdsc-dev.svg"
+      icon: "/images/logos/gdsc.png"
     },
     {
       title: "Android Lead",
@@ -352,7 +352,7 @@ export default function AboutSection() {
         "Headed Android development activities and technical mentorship sessions",
         "Organized hands-on coding workshops and contributed to open-source projects supporting student learning and engagement"
       ],
-      icon: "/images/logos/gdsc-android.svg"
+      icon: "/images/logos/android.png"
     }
   ];
 
@@ -369,7 +369,7 @@ export default function AboutSection() {
         "Analyzed the impact of BI systems on healthcare operational efficiency",
         "Developed framework for real-time analytics in patient care monitoring"
       ],
-      icon: "/images/logos/ijecbs.png"
+      icon: "/images/logos/issn.jpg"
     }
   ];
 
