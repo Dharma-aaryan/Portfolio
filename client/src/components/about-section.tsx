@@ -293,7 +293,7 @@ export default function AboutSection() {
         "Specialized in Data Analytics, Business Intelligence, and Technology Strategy",
         "Coursework: Advanced Database Systems, Machine Learning, Business Process Management, IT Project Management"
       ],
-      icon: "/images/logos/utd.png"
+      icon: "/images/logos/utd-new.png"
     },
     {
       title: "Bachelor of Engineering in Computer Engineering",
@@ -307,7 +307,7 @@ export default function AboutSection() {
         "Graduated with First Class honors, focusing on software development, data structures, and computer systems",
         "Led multiple academic projects in web development, mobile applications, and database management systems"
       ],
-      icon: "/images/logos/sppu.jpg"
+      icon: "/images/logos/sppu-new.png"
     }
   ];
 
