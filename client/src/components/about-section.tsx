@@ -70,8 +70,17 @@ const ExperienceCard = ({ item }: { item: ExperienceItem }) => (
   <div className="bg-[var(--portfolio-primary)]/50 p-6 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift shadow-lg hover:shadow-xl transition-all duration-300">
     <div className="flex items-start space-x-4">
       {item.icon && (
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-2 mt-1 shadow-sm relative">
-          <div className="absolute inset-0 bg-white/90 rounded-xl"></div>
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden p-2 mt-1 shadow-sm relative" 
+             style={{
+               backgroundImage: `
+                 radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.5) 0%, transparent 50%),
+                 radial-gradient(circle at 80% 70%, rgba(147, 51, 234, 0.5) 0%, transparent 50%),
+                 radial-gradient(circle at 60% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+                 linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)
+               `,
+               backgroundSize: '100% 100%, 80% 80%, 60% 60%, 100% 100%'
+             }}>
+          <div className="absolute inset-0 bg-white/85 rounded-xl backdrop-blur-sm"></div>
           <img 
             src={item.icon} 
             alt={`${item.organization} logo`}
@@ -111,8 +120,17 @@ const TabCard = ({ item }: { item: ExperienceItem }) => (
   <div className="bg-[var(--portfolio-primary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] hover-lift hover:shadow-[0_20px_60px_rgba(0,191,255,0.25)] transition-all duration-300 w-full max-w-none cursor-pointer">
     <div className="flex items-start space-x-6">
       {item.icon && (
-        <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 mt-1 shadow-sm relative">
-          <div className="absolute inset-0 bg-white/85 rounded-xl"></div>
+        <div className="flex-shrink-0 w-14 h-14 rounded-xl overflow-hidden p-2 mt-1 shadow-sm relative"
+             style={{
+               backgroundImage: `
+                 radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.6) 0%, transparent 50%),
+                 radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.6) 0%, transparent 50%),
+                 radial-gradient(circle at 50% 10%, rgba(99, 102, 241, 0.4) 0%, transparent 50%),
+                 conic-gradient(from 45deg, #06b6d4, #3b82f6, #6366f1, #06b6d4)
+               `,
+               backgroundSize: '120% 120%, 100% 100%, 80% 80%, 100% 100%'
+             }}>
+          <div className="absolute inset-0 bg-white/80 rounded-xl backdrop-blur-sm"></div>
           <img 
             src={item.icon} 
             alt={`${item.organization} logo`}
