@@ -50,7 +50,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-[var(--portfolio-accent)] shadow-2xl hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/images/profile.jpg"
+                  src="/images/aaryan.png"
                   alt="Aaryan Dharmadhikari"
                   className="w-full h-full object-cover object-center"
                   loading="eager"
