@@ -2,7 +2,7 @@ export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -15,41 +15,47 @@ export default function Footer() {
               Aaryan Dharmadhikari
             </div>
             <p className="text-[var(--portfolio-text-secondary)]">
-              Building the future, one line of code at a time.
+              You miss 100% of the chances you don't take.
             </p>
           </div>
-          
+
           <nav className="flex flex-wrap items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection("about")}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
               About
             </button>
-            <button 
-              onClick={() => scrollToSection('certifications')}
+            <button
+              onClick={() => scrollToSection("certifications")}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
               Certifications
             </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
+            <button
+              onClick={() => scrollToSection("projects")}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
               Projects
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <button
+              onClick={() => scrollToSection("contact")}
               className="text-[var(--portfolio-text-secondary)] hover:text-[var(--portfolio-accent)] transition-colors duration-300"
             >
               Contact
             </button>
           </nav>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t border-[var(--portfolio-secondary)] text-center">
           <p className="text-[var(--portfolio-text-secondary)] text-sm">
-            © 2025 Aaryan Dharmadhikari. All rights reserved. Built with <span className="text-[var(--portfolio-accent)]">React</span> & modern web technologies.
+            {" "}
+            © 2025{" "}
+            <span className="text-[var(--portfolio-accent)]">
+              Aaryan Dharmadhikari.
+            </span>{" "}
+            <br></br>Built with{" "}
+            <span className="text-[var(--portfolio-accent)]">React JS</span>
           </p>
         </div>
       </div>

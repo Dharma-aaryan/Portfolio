@@ -24,6 +24,23 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
+  /* Light Theme (default) */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --primary: #0f172a;
+  --primary-foreground: #ffffff;
+
+  --secondary: #e2e8f0;
+  --secondary-foreground: #1e293b;
+
+  --accent: #2563eb;
+  --accent-foreground: #ffffff;
+
+  /* add more as needed */
+}
+
   /* Dark theme portfolio colors */
   --portfolio-primary: hsl(0, 0%, 3.9%);
   --portfolio-secondary: hsl(0, 0%, 10.2%);
@@ -154,4 +171,21 @@
       padding: 4rem 0;
     }
   }
+}
+
+/* Hides scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

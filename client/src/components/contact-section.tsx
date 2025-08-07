@@ -6,14 +6,21 @@ import { useMutation } from "@tanstack/react-query";
 import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   const { toast } = useToast();
-  
+
   const form = useForm<InsertContact>({
     resolver: zodResolver(insertContactSchema),
     defaultValues: {
@@ -25,7 +32,7 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest('POST', '/api/contact', data);
+      const response = await apiRequest("POST", "/api/contact", data);
       return response.json();
     },
     onSuccess: () => {
@@ -49,56 +56,74 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-[var(--portfolio-primary)]">
+    <section
+      id="contact"
+      className="section-padding bg-[var(--portfolio-primary)]"
+    >
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-[var(--portfolio-text-secondary)] max-w-3xl mx-auto">
-            Ready to bring your next project to life? Let's discuss how we can work together.
+            Ready to bring your next project to life? Let's discuss how we can
+            work together.
           </p>
         </div>
-        
+
         <div className="max-w-2xl mx-auto">
           {/* Contact Icons */}
           <div className="flex justify-center items-center space-x-8 mb-12">
-            <a 
-              href="https://linkedin.com/in/aaryandharmadhikari" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/dharma-aaryan/"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Linkedin className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
+              <Linkedin
+                className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300"
+                size={28}
+              />
             </a>
-            <a 
-              href="https://github.com/aaryandharmadhikari" 
-              target="_blank" 
+            <a
+              href="https://github.com/Dharma-aaryan"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Github className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
+              <Github
+                className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300"
+                size={28}
+              />
             </a>
-            <a 
-              href="mailto:aaryandharmadhikari@gmail.com"
+            <a
+              href="mailto:aaryandharmadhikari1@gmail.com"
               className="w-16 h-16 border-2 border-[var(--portfolio-accent)] rounded-xl flex items-center justify-center hover:bg-[var(--portfolio-accent)] hover:scale-110 transition-all duration-300 cursor-pointer group"
             >
-              <Mail className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300" size={28} />
+              <Mail
+                className="text-[var(--portfolio-accent)] group-hover:text-[var(--portfolio-primary)] transition-colors duration-300"
+                size={28}
+              />
             </a>
           </div>
-          
+
           {/* Contact Form */}
           <div className="bg-[var(--portfolio-secondary)]/50 p-8 rounded-2xl border border-[var(--portfolio-secondary)] w-full">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">Name</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">
+                        Name
+                      </FormLabel>
                       <FormControl>
-                        <Input 
+                        <Input
                           {...field}
                           placeholder="Your name"
                           className="w-full bg-[var(--portfolio-primary)] border border-[var(--portfolio-secondary)] rounded-lg px-4 py-3 text-[var(--portfolio-text-primary)] focus:border-[var(--portfolio-accent)] focus:outline-none transition-colors duration-300"
@@ -108,15 +133,17 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">Email</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">
+                        Email
+                      </FormLabel>
                       <FormControl>
-                        <Input 
+                        <Input
                           {...field}
                           type="email"
                           placeholder="your@email.com"
@@ -127,16 +154,17 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
 
                 <FormField
                   control={form.control}
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">Message</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[var(--portfolio-text-primary)]">
+                        Message
+                      </FormLabel>
                       <FormControl>
-                        <Textarea 
+                        <Textarea
                           {...field}
                           rows={5}
                           placeholder="Tell me about your project..."
@@ -147,8 +175,8 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
-                <Button 
+
+                <Button
                   type="submit"
                   disabled={contactMutation.isPending}
                   className="w-full gradient-bg text-[var(--portfolio-text-primary)] py-4 rounded-lg font-semibold hover:scale-[1.02] transition-transform duration-300 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
